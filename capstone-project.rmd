@@ -1,14 +1,49 @@
-The problem
+# Who Shows Up and Why
 
-Client
+## The Problem
 
-How this is actionable
-- why do they care
-- what will they decide
-- what will they do with this that they wouldn't do otherwise
+The Children's Trust invests approximately $50 million dollars in after-school programming for children in grades K-5 in Miami-Dade County. Often times, its partner organizations that provide the afterschool services that The Trust funds struggle to ensure that services are fully utilized by children. This is a missed opportunity for children in the community that can benefit from these programs, and it is a less-than-optimal use of public funding.
 
-The data
-- what data
-- how will i get it
+## Client
 
-Approach
+The Children's Trust is special taxing district that invests in programming for children, youth and families in Miami-Dade County. A special taxing district is a public entity that receives tax revenue for a specified purpose.
+
+In the case of The Trust, its revenues of approximately $150 million originate from property tax revenue generated in Miami-Dade County and these funds are specifically allotted to provide services to all children and families in teh county.
+
+Services that The Trust funds range in ways that support the healthy development of children and their families all the way from expecting parents, through early childhood, on to school-age years and all the way through successful transitions to adulthood.
+
+## Why This Matters
+
+The Children's Trust wants to support full utilization of the services it funds so that as many children in the community can benefit from these available opportunities and so that the public funds it administers can be leveraged to yield the highest possible social return on investment.
+
+In the short term, by understanding how different factors contribute to a child's attendance in a program, they can target additional support to their partner agencies to help engage those children that are harder to engage and retain. In the longer term, they will design their grant opportunites and programs to be more responsive to these children that are header to reach.
+
+Without this data, efforts to further engage children follow more of a one-size-fits-all approah and are thus less efficient at addressing the problem. Without being able to identify and predict which children will struggle to remained engaged with a program, there is no is no way to specifically target approaches beyond operating on assumptions and anecdotal evidence.
+
+## The Data
+
+The data will come from several public sources, including The Children's Trust itself. The data will comprise of data about children's attendance in afterschool programs (dependent variable), as well as contextual data around these children, their communities, the programs they are attended (independent variables). Below are the sources and types of data:
+
+1. The Children's Trust
+  + Child attendance
+  + Child demographics
+  + Program location
+2. American Community Survey (based on zip codes)
+  + Education
+  + Household info
+  + Family info
+3. Florida Department of Health (based on zip codes)
+  + Births
+  + Deaths
+4. Miami-Dade County Public Schools (based on zip codes)
+  + School enrollment
+
+## Approach
+
+The approach will be to develop a predictive model based on the impact that variables around a participant's demographics and community indicators of their neighborhoods have on their attendance in an after-school program.
+
+## Deliverables
+
+Deliverables will include a presentation on the results of the predictive model as well as the code used to develop the model.
+
+The code of the predictive model is intended to be used as a basis for similar analyses but with varying populations or subsets thereof as well as different dependent variables such as improvement in the areas of literacy and emotional intelligence.
