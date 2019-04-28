@@ -1,0 +1,38 @@
+﻿code
+library(readxl)
+"refine <- read_excel(""C:/Users/jorge/OneDrive - The Children's Trust/refine.xlsx"")"
+View(refine)
+"install.packages(""tidyverse"")"
+"library(""dplyr"")"
+"refine <- refine %>% mutate_at(vars(company),funs(tolower(refine$company)))"
+refine
+"refine <- refine %>% mutate_at(vars(company),funs(gsub("".*ps.*"",""philips"",refine$company)))"
+refine
+"refine <- refine %>% mutate_at(vars(company),funs(gsub("".*ak.*"",""akzo"",refine$company)))"
+refine
+"refine <- refine %>% mutate_at(vars(company),funs(gsub("".*un.*"",""unilever"",refine$company)))"
+View(refine)
+"codes <- c(""akzo"", ""phillips"", ""van houten"", ""unilever"")"
+"D <- adist(refine$company, codes)"
+colnames(D) <- codes
+rownames(D) <- refine$company
+D
+"library(""tidyr"")"
+"separate(refine,`Product code / number`,into=c(""product_code"",""product_number""))"
+"refine <- separate(refine,`Product code / number`,into=c(""product_code"",""product_number""))"
+refine
+"refine %>% mutate(recode(product_code,p = ""Smartphone"", v = ""TV"", x = ""Laptop"", q = ""Tablet""))"
+"refine <- refine %>% mutate(recode(product_code,p = ""Smartphone"", v = ""TV"", x = ""Laptop"", q = ""Tablet""))"
+View(refine)
+"View(refine %>% mutate(full_address=(paste(refine$address,refine$city,refine$country,sep="",""))))"
+"refine <- refine %>% mutate(full_address=(paste(refine$address,refine$city,refine$country,sep="","")))"
+View(refine)
+"refine %>% rename(product=""recode(...)"")"
+"refine <- refine %>% rename(product=""recode(...)"")"
+View(refine)
+"install.packages(""fastDummies"")"
+library(fastDummies)
+"View(refine %>% dummy_cols(select_columns = c(""company"",""product"")))"
+"refine <- refine %>% dummy_cols(select_columns = c(""company"",""product""))"
+View(refine)
+"savehistory(""C:/Users/jorge/OneDrive - The Children's Trust/springboard-data-science-intro/Data Wrangling 1 - Code.Rhistory"")"
