@@ -1,0 +1,22 @@
+"library(""tidyverse"")",,,
+write_csv(refine,C:/Users/jorge/OneDrive - The Children's Trust/springboard-data-science-intro/Data Wrangling 1 - Code.csv),,
+library(readxl),,,
+"titanic3 <- read_excel(""titanic3.xls"")",,,
+View(titanic3),,,
+titanic3 <- titanic3 %>%,,,
+mutate_at(vars(embarked),funs(replace_na(embarked,S))),
+View(titanic3),,,
+titanic3 <- titanic3 %>%,,,
+mutate_at(vars(embarked),"funs(gsub(""^$""",S,embarked)))
+View(titanic3),,,
+titanic3 <- titanic3 %>%,,,
+mutate_at(vars(embarked),"funs(gsub(""\\s""",S,embarked)))
+View(titanic3),,,
+mean(titanic3$age,na.rm=TRUE),,
+titanic3 <- titanic3 %>%,,,
+mutate_at(vars(age),funs(replace_na(titanic3$age,mean(titanic3$age,na.rm=TRUE))))
+View(titanic3),,,
+titanic3 <- titanic3 %>% mutate_at(vars(boat),funs(replace_na(titanic3$boat,None))),
+titanic3 <- titanic3 %>% mutate(has_cabin_number = if_else(is.na(cabin),0,1,0))
+View(titanic3),,,
+"savehistory(""C:/Users/jorge/OneDrive - The Children's Trust/springboard-data-science-intro/titanic3_code.Rhistory"")",,,
